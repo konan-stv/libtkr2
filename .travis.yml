@@ -9,6 +9,7 @@ addons:
    - ubuntu-toolchain-r-test
   packages:
    - g++-7
+   - doxygen
 
 before_script:
  - sudo apt-get install libgtest-dev -y
@@ -27,9 +28,17 @@ script:
  - echo $TRAVIS_PROJECT_NAME
  - cmake --build .
  - cmake --build . --target test
+ - doxygen Doxyfile
  #- cmake --build . --target package
 
-#deploy:
+deploy:
+ provider: pages
+ skip-cleanup: true
+ local_dir: html
+ github-token: $GITHUB_TOKEN
+ keep-history: true
+ on:
+  branch: master
 #  provider: script
 #  skip_cleanup: true
 #  script:
