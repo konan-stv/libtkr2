@@ -1,3 +1,9 @@
+svnversion.h
+modbus.h
+.svn/*
+.idea/*
+cmake-biuld-debug/*
+
 # Prerequisites
 *.d
 

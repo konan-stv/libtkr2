@@ -1,0 +1,36 @@
+sudo: required
+language: 
+ - cpp
+dist: trusty
+
+addons:
+ apt:
+  sources:
+   - ubuntu-toolchain-r-test
+  packages:
+   - g++-7
+
+before_script:
+ - sudo apt-get install libgtest-dev -y
+ - cd /usr/src/gtest
+ - sudo env "PATH=$PATH" cmake .
+ - sudo make
+ - sudo cp *.a /usr/lib
+ - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
+ - sudo apt-get update -qq
+ - cd $TRAVIS_BUILD_DIR
+
+script:
+ - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7 cmake .
+ - . ./pname.sh
+ - echo "Project name:"
+ - echo $TRAVIS_PROJECT_NAME
+ - cmake --build .
+ - cmake --build . --target test
+ #- cmake --build . --target package
+
+#deploy:
+#  provider: script
+#  skip_cleanup: true
+#  script:
+#  - curl -T $TRAVIS_PROJECT_NAME-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ukonan-stv:$BINTRAY_API_KEY "https://api.bintray.com/content/konan-stv/otus_hw/$TRAVIS_PROJECT_NAME/$TRAVIS_BUILD_NUMBER/$TRAVIS_PROJECT_NAME-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
