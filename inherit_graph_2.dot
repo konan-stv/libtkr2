@@ -1,7 +1,0 @@
-digraph "Иерархия классов. Графический вид."
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="ifBitset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classif_bitset.html",tooltip="Интерфейс для хранения любых значений с побитовым доступом "];
-}
