@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="pages.html"><span>Описания</span></a></li>
       <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li class="current"><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('libtkr2__core_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -112,9 +111,9 @@ $(document).ready(function(){initNavTree('libtkr2__core_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LIBTKR2_BASE_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="classtkr_base_class.html">tkrBaseClass</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="classtkrBaseClass.html">tkrBaseClass</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> tHandler = void (<a class="code" href="classtkr_base_class.html">tkrBaseClass</a>::*)(<span class="keywordtype">void</span>* data);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> tHandler = void (<a class="code" href="classtkrBaseClass.html">tkrBaseClass</a>::*)(<span class="keywordtype">void</span>* data);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> tEvRec = std::pair&lt;tkrBaseClass*, tHandler&gt;;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> tEvMap = std::multimap&lt;int, tEvRec&gt;;</div>
@@ -128,15 +127,15 @@ $(document).ready(function(){initNavTree('libtkr2__core_8h_source.html','');});
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> std::string* cev;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classevent.html">event</a>() {nextID = 0; cev = <span class="keyword">nullptr</span>;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keyword">event</span>&amp; getInstance();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> _add(<span class="keywordtype">int</span> htype, <a class="code" href="classtkr_base_class.html">tkrBaseClass</a>* cl, tHandler h);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> _add(<span class="keywordtype">int</span> htype, <a class="code" href="classtkrBaseClass.html">tkrBaseClass</a>* cl, tHandler h);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> _evoke(<span class="keywordtype">int</span> ev, <span class="keywordtype">void</span>* data);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> _add(<span class="keyword">const</span> std::string&amp; ev, <a class="code" href="classtkr_base_class.html">tkrBaseClass</a>* cl, tHandler h);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> _add(<span class="keyword">const</span> std::string&amp; ev, <a class="code" href="classtkrBaseClass.html">tkrBaseClass</a>* cl, tHandler h);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> _evoke(<span class="keyword">const</span> std::string&amp; ev, <span class="keywordtype">void</span>* data = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> _is(<span class="keyword">const</span> std::string&amp; ev);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classevent.html">event</a>(<span class="keyword">const</span> <a class="code" href="classevent.html">event</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">event</span>&amp; operator=(<a class="code" href="classevent.html">event</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classevent.html#a51cadec1b5693978ec92422bbd696af0">reg</a>(<span class="keyword">const</span> std::string&amp; ev, <a class="code" href="classtkr_base_class.html">tkrBaseClass</a>* cl, tHandler h);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classevent.html#a51cadec1b5693978ec92422bbd696af0">reg</a>(<span class="keyword">const</span> std::string&amp; ev, <a class="code" href="classtkrBaseClass.html">tkrBaseClass</a>* cl, tHandler h);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classevent.html#a1ec1a038db94472ffb84c96e59a3171f">evoke</a>(<span class="keyword">const</span> std::string&amp; ev, <span class="keywordtype">void</span>* data = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classevent.html#a779f78d24053af6375e66b9cd9044a8b">is</a>(<span class="keyword">const</span> std::string&amp; ev);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
@@ -145,27 +144,27 @@ $(document).ready(function(){initNavTree('libtkr2__core_8h_source.html','');});
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// TODO: разделение на дискретные (кнопка, все состояния сохраняются в очереди) и аналоговые</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//       (при наличии в очереди такого же события заменяется значение)</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classtkr_base_class.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtkr_base_class.html">tkrBaseClass</a> {</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classtkrBaseClass.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtkrBaseClass.html">tkrBaseClass</a> {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keywordtype">void</span>* data) = 0;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">friend</span> <a class="code" href="classevent.html">event</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtkr_base_class.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a>(<span class="keyword">const</span> std::string&amp; ev);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classtkr_base_class.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a>(<span class="keyword">const</span> std::string&amp; ev, T h);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtkrBaseClass.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a>(<span class="keyword">const</span> std::string&amp; ev);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classtkrBaseClass.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a>(<span class="keyword">const</span> std::string&amp; ev, T h);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classtkr_base_class.html#a9908af301429d3a6d29383371bb944c0">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classtkr_base_class.html#a9f9510e407cb9cdc127012148e5647ee">tkrBaseClass::regEvent</a>(<span class="keyword">const</span> std::string&amp; ev, T h) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classtkrBaseClass.html#a9908af301429d3a6d29383371bb944c0">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classtkrBaseClass.html#a9f9510e407cb9cdc127012148e5647ee">tkrBaseClass::regEvent</a>(<span class="keyword">const</span> std::string&amp; ev, T h) {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classevent.html#a51cadec1b5693978ec92422bbd696af0">event::reg</a>(ev, <span class="keyword">this</span>, reinterpret_cast&lt;tHandler&gt;(h));</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif //LIBTKR2_BASE_H</span></div>
+<div class="ttc" id="classtkrBaseClass_html"><div class="ttname"><a href="classtkrBaseClass.html">tkrBaseClass</a></div><div class="ttdoc">Корневой класс-родитель для библиотеки libtkr. </div><div class="ttdef"><b>Definition:</b> libtkr2_core.h:66</div></div>
 <div class="ttc" id="classevent_html"><div class="ttname"><a href="classevent.html">event</a></div><div class="ttdoc">Синглтон для рассылки событий </div><div class="ttdef"><b>Definition:</b> libtkr2_core.h:33</div></div>
-<div class="ttc" id="classtkr_base_class_html_a9f9510e407cb9cdc127012148e5647ee"><div class="ttname"><a href="classtkr_base_class.html#a9f9510e407cb9cdc127012148e5647ee">tkrBaseClass::regEvent</a></div><div class="ttdeci">void regEvent(const std::string &amp;ev)</div><div class="ttdoc">Зарегистрировать событие с обработчиком по умолчанию </div><div class="ttdef"><b>Definition:</b> libtkr2_core.cpp:102</div></div>
 <div class="ttc" id="classevent_html_a51cadec1b5693978ec92422bbd696af0"><div class="ttname"><a href="classevent.html#a51cadec1b5693978ec92422bbd696af0">event::reg</a></div><div class="ttdeci">static void reg(const std::string &amp;ev, tkrBaseClass *cl, tHandler h)</div><div class="ttdoc">Зарегистрировать обработчик события </div><div class="ttdef"><b>Definition:</b> libtkr2_core.cpp:56</div></div>
 <div class="ttc" id="classevent_html_a779f78d24053af6375e66b9cd9044a8b"><div class="ttname"><a href="classevent.html#a779f78d24053af6375e66b9cd9044a8b">event::is</a></div><div class="ttdeci">static bool is(const std::string &amp;ev)</div><div class="ttdoc">Проверка вызванного события </div><div class="ttdef"><b>Definition:</b> libtkr2_core.cpp:89</div></div>
-<div class="ttc" id="classtkr_base_class_html"><div class="ttname"><a href="classtkr_base_class.html">tkrBaseClass</a></div><div class="ttdoc">Корневой класс-родитель для библиотеки libtkr. </div><div class="ttdef"><b>Definition:</b> libtkr2_core.h:66</div></div>
+<div class="ttc" id="classtkrBaseClass_html_a9f9510e407cb9cdc127012148e5647ee"><div class="ttname"><a href="classtkrBaseClass.html#a9f9510e407cb9cdc127012148e5647ee">tkrBaseClass::regEvent</a></div><div class="ttdeci">void regEvent(const std::string &amp;ev)</div><div class="ttdoc">Зарегистрировать событие с обработчиком по умолчанию </div><div class="ttdef"><b>Definition:</b> libtkr2_core.cpp:102</div></div>
 <div class="ttc" id="classevent_html_a1ec1a038db94472ffb84c96e59a3171f"><div class="ttname"><a href="classevent.html#a1ec1a038db94472ffb84c96e59a3171f">event::evoke</a></div><div class="ttdeci">static void evoke(const std::string &amp;ev, void *data=nullptr)</div><div class="ttdoc">Инициировать событие </div><div class="ttdef"><b>Definition:</b> libtkr2_core.cpp:71</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

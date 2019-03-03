@@ -1,15 +1,13 @@
 var NAVTREE =
 [
   [ "libtkr2", "index.html", [
-    [ "libtkr2", "md__r_e_a_d_m_e.html", null ],
     [ "Структуры данных", null, [
       [ "Структуры данных", "annotated.html", "annotated" ],
       [ "Алфавитный указатель структур данных", "classes.html", null ],
       [ "Иерархия классов", "hierarchy.html", "hierarchy" ],
       [ "Поля структур", "functions.html", [
         [ "Указатель", "functions.html", null ],
-        [ "Функции", "functions_func.html", null ],
-        [ "Переменные", "functions_vars.html", null ]
+        [ "Функции", "functions_func.html", null ]
       ] ]
     ] ],
     [ "Файлы", null, [

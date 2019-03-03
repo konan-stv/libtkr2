@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="pages.html"><span>Описания</span></a></li>
       <li class="current"><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -85,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classif_bitset.html','');});
+$(document).ready(function(){initNavTree('classifBitset.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -93,7 +92,7 @@ $(document).ready(function(){initNavTree('classif_bitset.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,13 +108,12 @@ $(document).ready(function(){initNavTree('classif_bitset.html','');});
 <div class="contents">
 
 <p>Интерфейс для хранения любых значений с побитовым доступом  
- <a href="classif_bitset.html#details">Подробнее...</a></p>
+ <a href="classifBitset.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="libtkr2__types_8h_source.html">libtkr2_types.h</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Интерфейс для хранения любых значений с побитовым доступом </p>
-<p>Класс предназначен для обеспечения побитового доступа к значениям любого типа с сохранением обычного интерфейса - операторов присваивания, взятия адреса и приведения типов. Прямой доступ к битам осуществляется через битсет (b[0] - b[N], установка и сброс бита по индексу также возможен соответствующими методами: </p>
-<div class="fragment"><div class="line"><a class="code" href="unionif_bitmap.html">ifBitmap&lt;uint16_t&gt;</a> b(0xf0);         <span class="comment">// создаём и инициализируем экземпляр</span></div>
+<div class="textblock"><p>Класс предназначен для обеспечения побитового доступа к значениям любого типа с сохранением обычного интерфейса - операторов присваивания, взятия адреса и приведения типов. Прямой доступ к битам осуществляется через битсет (b[0] - b[N], установка и сброс бита по индексу также возможен соответствующими методами: </p>
+<div class="fragment"><div class="line">ifBitmap&lt;uint16_t&gt; b(0xf0);         <span class="comment">// создаём и инициализируем экземпляр</span></div>
 <div class="line">std::cout &lt;&lt; b.b[2] &lt;&lt; std::endl;   <span class="comment">// доступ к битам</span></div>
 <div class="line">std::cout &lt;&lt; b.b[4] &lt;&lt; std::endl;</div>
 <div class="line">b.clear(4);                         <span class="comment">// сброс бита</span></div>
@@ -134,7 +132,7 @@ $(document).ready(function(){initNavTree('classif_bitset.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="classif_bitset.html">ifBitset</a></li>
+    <li class="navelem"><a class="el" href="classifBitset.html">ifBitset</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

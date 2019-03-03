@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="pages.html"><span>Описания</span></a></li>
       <li class="current"><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -93,7 +92,7 @@ $(document).ready(function(){initNavTree('classevent.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,7 +116,7 @@ $(document).ready(function(){initNavTree('classevent.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Открытые статические члены</h2></td></tr>
-<tr class="memitem:a51cadec1b5693978ec92422bbd696af0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classevent.html#a51cadec1b5693978ec92422bbd696af0">reg</a> (const std::string &amp;ev, <a class="el" href="classtkr_base_class.html">tkrBaseClass</a> *cl, tHandler h)</td></tr>
+<tr class="memitem:a51cadec1b5693978ec92422bbd696af0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classevent.html#a51cadec1b5693978ec92422bbd696af0">reg</a> (const std::string &amp;ev, <a class="el" href="classtkrBaseClass.html">tkrBaseClass</a> *cl, tHandler h)</td></tr>
 <tr class="memdesc:a51cadec1b5693978ec92422bbd696af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать обработчик события  <a href="#a51cadec1b5693978ec92422bbd696af0">Подробнее...</a><br/></td></tr>
 <tr class="separator:a51cadec1b5693978ec92422bbd696af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ec1a038db94472ffb84c96e59a3171f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classevent.html#a1ec1a038db94472ffb84c96e59a3171f">evoke</a> (const std::string &amp;ev, void *data=nullptr)</td></tr>
@@ -128,8 +127,7 @@ $(document).ready(function(){initNavTree('classevent.html','');});
 <tr class="separator:a779f78d24053af6375e66b9cd9044a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Синглтон для рассылки событий </p>
-<p>Класс предназначен для рассылки событий всем остальным классам проекта. Идентификация событий осуществляется по строковым константам. Классы регистрируют свои обработчики событий в конструкторе. Обработчик принимает единственный параметр типа void*, предполагается, что обработчик знает, что за структуру ему передали и что с ней дальше делать. </p>
+<div class="textblock"><p>Класс предназначен для рассылки событий всем остальным классам проекта. Идентификация событий осуществляется по строковым константам. Классы регистрируют свои обработчики событий в конструкторе. Обработчик принимает единственный параметр типа void*, предполагается, что обработчик знает, что за структуру ему передали и что с ней дальше делать. </p>
 </div><h2 class="groupheader">Методы</h2>
 <a class="anchor" id="a1ec1a038db94472ffb84c96e59a3171f"></a>
 <div class="memitem">
@@ -162,8 +160,6 @@ $(document).ready(function(){initNavTree('classevent.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Инициировать событие </p>
 <p>Метод вызывает все обработчики, привязанные к идентификатору ev, передавая им указатель на набор данных.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -196,8 +192,6 @@ $(document).ready(function(){initNavTree('classevent.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Проверка вызванного события </p>
 <p>Метод возвращает true, если в настоящий момент происходит рассылка события, переданного в качестве аргумента. Импользуется в случае, когда на несколько событий назначен один обработчик, и ему нужно выяснить, какое именно событие его вызвало.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -225,7 +219,7 @@ $(document).ready(function(){initNavTree('classevent.html','');});
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classtkr_base_class.html">tkrBaseClass</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classtkrBaseClass.html">tkrBaseClass</a> *&#160;</td>
           <td class="paramname"><em>cl</em>, </td>
         </tr>
         <tr>
@@ -246,8 +240,6 @@ $(document).ready(function(){initNavTree('classevent.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Зарегистрировать обработчик события </p>
 <p>Метод регистрирует обработчик события. При инициировании события будут вызваны все обработчики, привязанные к идентификатору ev.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">

@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="pages.html"><span>Описания</span></a></li>
       <li class="current"><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -85,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classtkr_base_class.html','');});
+$(document).ready(function(){initNavTree('classtkrBaseClass.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -93,7 +92,7 @@ $(document).ready(function(){initNavTree('classtkr_base_class.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,30 +110,24 @@ $(document).ready(function(){initNavTree('classtkr_base_class.html','');});
 <div class="contents">
 
 <p>Корневой класс-родитель для библиотеки libtkr.  
- <a href="classtkr_base_class.html#details">Подробнее...</a></p>
+ <a href="classtkrBaseClass.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="libtkr2__core_8h_source.html">libtkr2_core.h</a>&gt;</code></p>
-<div class="dynheader">
-Граф наследования:tkrBaseClass:</div>
-<div class="dyncontent">
-<div class="center"><img src="classtkr_base_class__inherit__graph.png" border="0" usemap="#tkr_base_class_inherit__map" alt="Inheritance graph"/></div>
-<map name="tkr_base_class_inherit__map" id="tkr_base_class_inherit__map">
-<area shape="rect" id="node2" href="classsome_class.html" title="someClass" alt="" coords="5,80,93,107"/><area shape="rect" id="node3" href="classsome_class2.html" title="someClass2" alt="" coords="118,80,212,107"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+
+<p>Производные классы:someClass и someClass2.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Защищенные члены</h2></td></tr>
-<tr class="memitem:a9f9510e407cb9cdc127012148e5647ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtkr_base_class.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a> (const std::string &amp;ev)</td></tr>
+<tr class="memitem:a9f9510e407cb9cdc127012148e5647ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtkrBaseClass.html#a9f9510e407cb9cdc127012148e5647ee">regEvent</a> (const std::string &amp;ev)</td></tr>
 <tr class="memdesc:a9f9510e407cb9cdc127012148e5647ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать событие с обработчиком по умолчанию  <a href="#a9f9510e407cb9cdc127012148e5647ee">Подробнее...</a><br/></td></tr>
 <tr class="separator:a9f9510e407cb9cdc127012148e5647ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9908af301429d3a6d29383371bb944c0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9908af301429d3a6d29383371bb944c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtkr_base_class.html#a9908af301429d3a6d29383371bb944c0">regEvent</a> (const std::string &amp;ev, T h)</td></tr>
+<tr class="memitem:a9908af301429d3a6d29383371bb944c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtkrBaseClass.html#a9908af301429d3a6d29383371bb944c0">regEvent</a> (const std::string &amp;ev, T h)</td></tr>
 <tr class="memdesc:a9908af301429d3a6d29383371bb944c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать событие с собственным обработчиком  <a href="#a9908af301429d3a6d29383371bb944c0">Подробнее...</a><br/></td></tr>
 <tr class="separator:a9908af301429d3a6d29383371bb944c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Корневой класс-родитель для библиотеки libtkr. </p>
-<p>Абстрактный класс. Предоставляет методы регистрации обработчиков событий, записи в лог и механизм заворачивания в тред. </p>
+<div class="textblock"><p>Абстрактный класс. Предоставляет методы регистрации обработчиков событий, записи в лог и механизм заворачивания в тред. </p>
 </div><h2 class="groupheader">Методы</h2>
 <a class="anchor" id="a9f9510e407cb9cdc127012148e5647ee"></a>
 <div class="memitem">
@@ -157,8 +150,6 @@ $(document).ready(function(){initNavTree('classtkr_base_class.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Зарегистрировать событие с обработчиком по умолчанию </p>
 <p>Метод регистрирует в синглтоне <a class="el" href="classevent.html">event</a> обработчик по умолчанию (handleEvent) данного класса с привязкой к текстовому идентификатору события.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -202,8 +193,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Зарегистрировать событие с собственным обработчиком </p>
 <p>Метод регистрирует в синглтоне <a class="el" href="classevent.html">event</a> собственный обработчик (метод класса-наследника, принимающий единственный аргумент void*) с привязкой к текстовому идентификатору события.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -224,7 +213,7 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="classtkr_base_class.html">tkrBaseClass</a></li>
+    <li class="navelem"><a class="el" href="classtkrBaseClass.html">tkrBaseClass</a></li>
     <li class="footer">Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

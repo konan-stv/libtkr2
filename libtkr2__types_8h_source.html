@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="pages.html"><span>Описания</span></a></li>
       <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li class="current"><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -90,7 +89,7 @@ $(document).ready(function(){initNavTree('libtkr2__types_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,25 +114,19 @@ $(document).ready(function(){initNavTree('libtkr2__types_8h_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;bitset&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="unionif_bitmap.html">   37</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionif_bitmap.html">ifBitmap</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">union </span>ifBitmap {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    T base;     </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">   39</a></span>&#160;    std::bitset&lt;sizeof(T)&gt; <a class="code" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">b</a>;       </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a29be9ef6634d66e13f620b5a9b11e1f1">   40</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="unionif_bitmap.html#a29be9ef6634d66e13f620b5a9b11e1f1">ifBitmap</a>(T v) : base(v) {}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> set(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">b</a>) {base |= (1&lt;&lt;<a class="code" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">b</a>);}       </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a0d20e58c3dacf7d99d0c38d9e8f2c73f">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="unionif_bitmap.html#a0d20e58c3dacf7d99d0c38d9e8f2c73f">clear</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">b</a>) {base &amp;= ~(1&lt;&lt;<a class="code" href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">b</a>);}    </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a3889ad9365101d701d8baa38299af357">   43</a></span>&#160;    T&amp; <a class="code" href="unionif_bitmap.html#a3889ad9365101d701d8baa38299af357">operator = </a>(<span class="keyword">const</span> T&amp; v) {base=v; <span class="keywordflow">return</span> *<span class="keyword">this</span>;}      </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a939410bbec965be1f744d2cdf5f63c2a">   44</a></span>&#160;    <span class="keyword">operator</span> T()<span class="keyword"> const </span>{<span class="keywordflow">return</span> base;}       </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a5b3aea8d5b8f964a5fdc8e2a41624eec">   45</a></span>&#160;    <span class="keyword">operator</span> T&amp;() {<span class="keywordflow">return</span> base;}        </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="unionif_bitmap.html#a62930a728907e5ca9a80585e7c755ed0">   46</a></span>&#160;    T* <a class="code" href="unionif_bitmap.html#a62930a728907e5ca9a80585e7c755ed0">operator &amp;</a>() {<span class="keywordflow">return</span> &amp;base;}     </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::bitset&lt;sizeof(T)&gt; b;       </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">explicit</span> ifBitmap(T v) : base(v) {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> set(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b) {base |= (1&lt;&lt;b);}       </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> clear(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b) {base &amp;= ~(1&lt;&lt;b);}    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    T&amp; operator = (<span class="keyword">const</span> T&amp; v) {base=v; <span class="keywordflow">return</span> *<span class="keyword">this</span>;}      </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">operator</span> T()<span class="keyword"> const </span>{<span class="keywordflow">return</span> base;}       </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">operator</span> T&amp;() {<span class="keywordflow">return</span> base;}        </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    T* operator &amp;() {<span class="keywordflow">return</span> &amp;base;}     </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif //LIBTKR2_TYPES_H</span></div>
-<div class="ttc" id="unionif_bitmap_html"><div class="ttname"><a href="unionif_bitmap.html">ifBitmap</a></div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:37</div></div>
-<div class="ttc" id="unionif_bitmap_html_a62930a728907e5ca9a80585e7c755ed0"><div class="ttname"><a href="unionif_bitmap.html#a62930a728907e5ca9a80585e7c755ed0">ifBitmap::operator&amp;</a></div><div class="ttdeci">T * operator&amp;()</div><div class="ttdoc">неявное приведение к ссылке на T. </div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:46</div></div>
-<div class="ttc" id="unionif_bitmap_html_a3d9bd077d60339464322c7f9e7717e5d"><div class="ttname"><a href="unionif_bitmap.html#a3d9bd077d60339464322c7f9e7717e5d">ifBitmap::b</a></div><div class="ttdeci">std::bitset&lt; sizeof(T)&gt; b</div><div class="ttdoc">переменная исходного типа </div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:39</div></div>
-<div class="ttc" id="unionif_bitmap_html_a0d20e58c3dacf7d99d0c38d9e8f2c73f"><div class="ttname"><a href="unionif_bitmap.html#a0d20e58c3dacf7d99d0c38d9e8f2c73f">ifBitmap::clear</a></div><div class="ttdeci">void clear(unsigned int b)</div><div class="ttdoc">установить бит в 1 (устаревшая) </div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:42</div></div>
-<div class="ttc" id="unionif_bitmap_html_a3889ad9365101d701d8baa38299af357"><div class="ttname"><a href="unionif_bitmap.html#a3889ad9365101d701d8baa38299af357">ifBitmap::operator=</a></div><div class="ttdeci">T &amp; operator=(const T &amp;v)</div><div class="ttdoc">сбросить бит в 0 (устаревшая) </div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:43</div></div>
-<div class="ttc" id="unionif_bitmap_html_a29be9ef6634d66e13f620b5a9b11e1f1"><div class="ttname"><a href="unionif_bitmap.html#a29be9ef6634d66e13f620b5a9b11e1f1">ifBitmap::ifBitmap</a></div><div class="ttdeci">ifBitmap(T v)</div><div class="ttdoc">битсет в той же области памяти </div><div class="ttdef"><b>Definition:</b> libtkr2_types.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
