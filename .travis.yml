@@ -10,6 +10,7 @@ addons:
   packages:
    - g++-7
    - doxygen
+   - graphviz
 
 before_script:
  - sudo apt-get install libgtest-dev -y
